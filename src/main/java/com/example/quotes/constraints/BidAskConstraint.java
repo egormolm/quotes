@@ -12,6 +12,8 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 public @interface BidAskConstraint {
     String message() default "Constraints failed! Bid should be less than Ask.";
-    Class<?>[] groups() default { };
-    Class<? extends Payload>[] payload() default { };
+
+    Class<?>[] groups() default {};
+
+    Class<? extends Payload>[] payload() default {};
 }

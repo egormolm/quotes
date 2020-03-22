@@ -6,7 +6,6 @@ import com.example.quotes.repository.QuoteRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
-import javax.transaction.Transactional;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.concurrent.ConcurrentHashMap;
@@ -15,7 +14,7 @@ import java.util.concurrent.ConcurrentHashMap;
 @RequiredArgsConstructor
 public class QuotesService {
 
-    private ConcurrentHashMap<String, EnergyLevel> energyLevels = new ConcurrentHashMap<>();
+    ConcurrentHashMap<String, EnergyLevel> energyLevels = new ConcurrentHashMap<>();
 
     private final QuoteRepository quoteRepository;
 
